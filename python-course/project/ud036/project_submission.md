@@ -4,7 +4,7 @@ You will write server-side code to store a list of your favorite movies, includi
 # Evaluation
 Your project will be evaluated by a Udacity Code Reviewer according to the rubric below. Be sure to review it thoroughly before you submit. All criteria must "meet specifications" in order to pass. Furthermore a code reviewer has posted [their pre-submission checklist](https://discussions.udacity.com/t/project-1-checklist-read-this-before-you-submit-your-project/39852) on the forums, refer to it for even more detail on what reviewers look for in a project.
 
-![]()
+![](https://github.com/wakqasahmed/full-stack-udacity/blob/master/python-course/project/ud036/rubric.png)
 
 # Submission
 When you're ready to submit your project, click [here](https://review.udacity.com/#!/rubrics/1775/start) and follow the instructions. Due to the high volume of submissions we receive, please allow up to **7 business days** for your evaluation to be returned.
