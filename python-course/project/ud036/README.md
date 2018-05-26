@@ -1,10 +1,10 @@
 # Project: Movie Trailer Website
-This project is part of the Full Stack Developer Nanodegree Program at Udacity. It shows a list of some of my favorite movies along with its details. The website also allows you to watch the trailer of the listed movies.
+This project is part of the Full Stack Developer Nanodegree Program at Udacity. It shows a list of some of my favorite movies along with its details. The website also allows you to watch trailers of the listed movies.
 
 # How to run?
 
 ## Pre-requisites
-- Python 3.6
+- Python 3.6.5
 - Web Browser (Recommended: Chrome)
 - Internet Connection (its not offline compatible)
 - A bit of Curosity ;)
