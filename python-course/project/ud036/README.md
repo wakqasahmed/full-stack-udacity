@@ -1,6 +1,16 @@
 # Project: Movie Trailer Website
 This project is part of the Full Stack Developer Nanodegree Program at Udacity. It shows a list of some of my favorite movies along with its details. The website also allows you to watch trailers of the listed movies.
 
+More details can be found here:
+
+**[Project Overview](./project_overview.md)**
+
+**[Project Details](./project_details.md)**
+
+**[Project Display Example](./project_display_example.md)**
+
+**[Project Submission](./project_submission.md)**
+
 # How to run?
 
 ## Pre-requisites
