@@ -55,7 +55,7 @@ HTML_WRAP = '''\
     </div>    
 
     <!-- post content will go here -->
-%s
+
   </body>
 </html>
 '''
@@ -69,7 +69,7 @@ POST = '''\
 def main():
   '''Main page of the forum.'''
   articles = "".join(POST % (title, views) for title, views in get_most_popular_articles())
-  html = HTML_WRAP % articles
+  html = HTML_WRAP# % articles
   return html
 
 if __name__ == '__main__':
