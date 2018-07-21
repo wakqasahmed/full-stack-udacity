@@ -76,38 +76,22 @@ This will give you the PostgreSQL database and support software needed for this 
 
 If you need to bring the virtual machine back online (with `vagrant up`), do so now. Then log into it with `vagrant ssh`.
 
-[_Successfully logged into the virtual machine._    ](https://classroom.udacity.com/nanodegrees/nd004-mena/parts/a8609286-c119-4bc5-b9c9-2a3828080114/modules/56f0f4c7-d611-4949-b8d5-e1b9df12d95f/lessons/d128b204-9a5c-4547-8599-b3983d06911b/concepts/a9cf98c8-0325-4c68-b972-58d5957f1a91#)
+| ![_Successfully logged into the virtual machine._    ](./ssh.png) | 
+|:--:| 
+| [_Successfully logged into the virtual machine._    ](https://classroom.udacity.com/nanodegrees/nd004-mena/parts/a8609286-c119-4bc5-b9c9-2a3828080114/modules/56f0f4c7-d611-4949-b8d5-e1b9df12d95f/lessons/d128b204-9a5c-4547-8599-b3983d06911b/concepts/a9cf98c8-0325-4c68-b972-58d5957f1a91#) |
 
 ## Download the data
 
-Next, [download the data here.](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip) You will need to unzip this file after downloading it. The file inside is called 
+Next, [download the data here.](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip) You will need to unzip this file after downloading it. The file inside is called `newsdata.sql`. Put this file into the `vagrant` directory, which is shared with your virtual machine.
 
-newsdata.sql. Put this file into the 
+To build the reporting tool, you'll need to load the site's data into your local database. Review how to use the `psql` command in this lesson: [(FSND version)](https://classroom.udacity.com/nanodegrees/nd004-mena/parts/a8609286-c119-4bc5-b9c9-2a3828080114/modules/56f0f4c7-d611-4949-b8d5-e1b9df12d95f/lessons/4cff95e1-3f1c-435a-bc6c-40fcf0d8f884/concepts/0b4079f5-6e64-4dd8-aee9-5c3a0db39840)
 
-vagrant directory, which is shared with your virtual machine.
-
-To build the reporting tool, you'll need to load the site's data into your local database. Review how to use the 
-
-psql command in this lesson: [(FSND version)](https://classroom.udacity.com/nanodegrees/nd004-mena/parts/a8609286-c119-4bc5-b9c9-2a3828080114/modules/56f0f4c7-d611-4949-b8d5-e1b9df12d95f/lessons/4cff95e1-3f1c-435a-bc6c-40fcf0d8f884/concepts/0b4079f5-6e64-4dd8-aee9-5c3a0db39840)
-
-To load the data, 
-
-cd into the 
-
-vagrant directory and use the command 
-
-psql -d news -f newsdata.sql.  
+To load the data, `cd` into the `vagrant` directory and use the command `psql -d news -f newsdata.sql`.  
 Here's what this command does:
 
-- 
-
-psql — the PostgreSQL command line program
-- 
-
--d news — connect to the database named news which has been set up for you
-- 
-
--f newsdata.sql — run the SQL statements in the file newsdata.sql
+- `psql` — the PostgreSQL command line program
+- `-d news` — connect to the database named news which has been set up for you
+- `-f newsdata.sql` — run the SQL statements in the file newsdata.sql
 
 Running this command will connect to your installed database server and execute the SQL commands in the downloaded file, creating tables and populating them with data.
 
@@ -115,52 +99,31 @@ Running this command will connect to your installed database server and execute 
 
 If this command gives an error message, such as —  
 
-psql: FATAL: database "news" does not exist  
+`psql: FATAL: database "news" does not exist`
 
-psql: could not connect to server: Connection refused  
+`psql: could not connect to server: Connection refused`
+
 — this means the database server is not running or is not set up correctly. This can happen if you have an _older version_ of the VM configuration from before this project was added. To continue, [download the virtual machine configuration](https://classroom.udacity.com/nanodegrees/nd004-mena/parts/a8609286-c119-4bc5-b9c9-2a3828080114/modules/56f0f4c7-d611-4949-b8d5-e1b9df12d95f/lessons/e168714c-3584-4569-bd1f-3d623c07b0ac/concepts/14c72fe3-e3fe-4959-9c4b-467cf5b7c3a0) into a fresh new directory and start it from there.
 
 ## Explore the data
 
-Once you have the data loaded into your database, connect to your database using 
+Once you have the data loaded into your database, connect to your database using `psql -d news` and explore the tables using the `\dt` and `\d` table commands and `select` statements.
 
-psql -d news and explore the tables using the 
-
-\dt and 
-
-\d table commands and 
-
-select statements.
-
-- 
-
-\dt — display tables — lists the tables that are available in the database.
-- 
-
-\d table — (replace _table_ with the name of a table) — shows the database schema for that particular table.
+- `\dt` — display tables — lists the tables that are available in the database.
+- `\d` table — (replace _table_ with the name of a table) — shows the database schema for that particular table.
 
 Get a sense for what sort of information is in each column of these tables.
 
 The database includes three tables:
 
-- The 
-
-authors table includes information about the authors of articles.
-- The 
-
-articles table includes the articles themselves.
-- The 
-
-log table includes one entry for each time a user has accessed the site.
+- The `authors` table includes information about the authors of articles.
+- The `articles` table includes the articles themselves.
+- The `log` table includes one entry for each time a user has accessed the site.
 
 As you explore the data, you may find it useful to take notes! Don't try to memorize all the columns. Instead, write down a description of the column names and what kind of values are found in those columns.
 
 ### Connecting from your code
 
-The database that you're working with in this project is running PostgreSQL, like the 
+The database that you're working with in this project is running PostgreSQL, like the `forum` database that you worked with in the course. So in your code, you'll want to use the `psycopg2` Python module to connect to it, for instance:
 
-forum database that you worked with in the course. So in your code, you'll want to use the 
-
-psycopg2 Python module to connect to it, for instance:
-
-db = psycopg2.connect("dbname=news")
+`db = psycopg2.connect("dbname=news")`
