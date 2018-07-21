@@ -1,33 +1,31 @@
-# Your assignment - Build it
+# Your assignment: Build it
 
-Your task is to create a reporting tool that prints out reports (in plain text) based on the data in the database. This reporting tool is a Python program using the 
-
-psycopg2 module to connect to the database.
+Your task is to create a reporting tool that prints out reports (in plain text) based on the data in the database. This reporting tool is a Python program using the `psycopg2` module to connect to the database.
 
 ## So what are we reporting, anyway?
 
 Here are the questions the reporting tool should answer. The example answers given aren't the right ones, though!
 
-1. What are the most popular three articles of all time? Which articles have been accessed the most? Present this information as a sorted list with the most popular article at the top.
+**1. What are the most popular three articles of all time?** Which articles have been accessed the most? Present this information as a sorted list with the most popular article at the top.
 
-Example:
+**Example:**
 
 - "Princess Shellfish Marries Prince Handsome" — 1201 views
 - "Baltimore Ravens Defeat Rhode Island Shoggoths" — 915 views
 - "Political Scandal Ends In Political Scandal" — 553 views
 
-2. Who are the most popular article authors of all time? That is, when you sum up all of the articles each author has written, which authors get the most page views? Present this as a sorted list with the most popular author at the top.
+**2. Who are the most popular article authors of all time?** That is, when you sum up all of the articles each author has written, which authors get the most page views? Present this as a sorted list with the most popular author at the top.
 
-Example:
+**Example:**
 
 - Ursula La Multa — 2304 views
 - Rudolf von Treppenwitz — 1985 views
 - Markoff Chaney — 1723 views
 - Anonymous Contributor — 1023 views
 
-3. On which days did more than 1% of requests lead to errors? The log table includes a column status that indicates the HTTP status code that the news site sent to the user's browser. (Refer to [this lesson](https://classroom.udacity.com/courses/ud303/lessons/6ff26dd7-51d6-49b3-9f90-41377bff4564/concepts/75becdb9-da2a-4fbf-9a30-5f3ccd1aa1d6) for more information about the idea of HTTP status codes.)
+**3. On which days did more than 1% of requests lead to errors?** The log table includes a column status that indicates the HTTP status code that the news site sent to the user's browser. (Refer to [this lesson](https://classroom.udacity.com/courses/ud303/lessons/6ff26dd7-51d6-49b3-9f90-41377bff4564/concepts/75becdb9-da2a-4fbf-9a30-5f3ccd1aa1d6) for more information about the idea of HTTP status codes.)
 
-Example:
+**Example:**
 
 - July 29, 2016 — 2.5% errors
 
@@ -35,17 +33,13 @@ Example:
 
 ### SQL style
 
-Each one of these questions can be answered with a single database query. Your code should get the database to do the heavy lifting by using joins, aggregations, and the 
+Each one of these questions can be answered with a single database query. Your code should get the database to do the heavy lifting by using joins, aggregations, and the `where` clause to extract just the information you need, doing minimal "post-processing" in the Python code itself.
 
-where clause to extract just the information you need, doing minimal "post-processing" in the Python code itself.
-
-In building this tool, you may find it useful to add views to the database. You are allowed and encouraged to do this! However, if you create views, make sure to put the create view commands you used into your lab's README file so your reviewer will know how to recreate them.
+In building this tool, you may find it useful to add views to the database. You are allowed and encouraged to do this! However, if you create views, make sure to put the **create view** commands you used into your lab's README file so your reviewer will know how to recreate them.
 
 ### Python code quality
 
-Your code should be written with good Python style. The [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/) is an excellent standard to follow. You can do a quick check using the 
-
-pep8 command-line tool.
+Your code should be written with good Python style. The [PEP8 style guide](https://www.python.org/dev/peps/pep-0008/) is an excellent standard to follow. You can do a quick check using the `pep8` command-line tool.
 
 
 # Review your skills
@@ -53,11 +47,7 @@ pep8 command-line tool.
 Completing this project will exercise your database skills. Here are some portions of the Relational Databases course that you might want to review:
 
 - [Joining tables](https://classroom.udacity.com/courses/ud197/lessons/3415228765/concepts/33932188550923)
-- [The 
-
-select ...
-
-where statement](https://classroom.udacity.com/courses/ud197/lessons/3423258756/concepts/33885287000923)
+- [The **`select ... where`** statement](https://classroom.udacity.com/courses/ud197/lessons/3423258756/concepts/33885287000923)
 - [Select clauses](https://classroom.udacity.com/courses/ud197/lessons/3423258756/concepts/33885287080923)
 - [Writing code with DB-API](https://classroom.udacity.com/courses/ud197/lessons/3483858580/concepts/35153985360923)
 - [Views](https://classroom.udacity.com/courses/ud197/lessons/3490418600/concepts/35140186650923)
@@ -84,11 +74,7 @@ If you skipped those lessons and came right to this project, that's OK! However,
 
 This will give you the PostgreSQL database and support software needed for this project. If you have used an older version of this VM, you may need to install it into a new directory.
 
-If you need to bring the virtual machine back online (with 
-
-vagrant up), do so now. Then log into it with 
-
-vagrant ssh.
+If you need to bring the virtual machine back online (with `vagrant up`), do so now. Then log into it with `vagrant ssh`.
 
 [_Successfully logged into the virtual machine._    ](https://classroom.udacity.com/nanodegrees/nd004-mena/parts/a8609286-c119-4bc5-b9c9-2a3828080114/modules/56f0f4c7-d611-4949-b8d5-e1b9df12d95f/lessons/d128b204-9a5c-4547-8599-b3983d06911b/concepts/a9cf98c8-0325-4c68-b972-58d5957f1a91#)
 
