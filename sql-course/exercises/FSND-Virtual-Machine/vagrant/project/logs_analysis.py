@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # 
-# A buggy web service in need of a database.
+# A web service to display the analysis of news articles logs.
 
 from flask import Flask, request, redirect, url_for
 
@@ -30,46 +30,44 @@ HTML_WRAP = '''\
     <h1>Logs Analysis</h1>
     <div>
     <h2>What are the most popular three articles of all time?</h2>
-    <ul>
-      <li>"Princess Shellfish Marries Prince Handsome" - 1201 views</li>
-      <li>"Baltimore Ravens Defeat Rhode Island Shoggoths" - 915 views</li>
-      <li>"Political Scandal Ends In Political Scandal" - 553 views</li>
-    </ul>
-    </div>
+    <ul>%s</ul>
+    </div>   
 
     <div>
     <h2>Who are the most popular article authors of all time?</h2>
-    <ul>
-      <li>Ursula La Multa - 2304 views</li>
-      <li>Rudolf von Treppenwitz - 1985 views</li>
-      <li>Markoff Chaney - 1723 views</li>
-      <li>Anonymous Contributor - 1023 views</li>
-    </ul>
+    <ul>%s</ul>
     </div>
 
     <div>
-    <h2>On which days did more than 1% of requests lead to errors?</h2>
-    <ul>
-      <li>July 29, 2016 - 2.5% errors</li>
-    </ul>
-    </div>    
-
-    <!-- post content will go here -->
+    <h2>On which days did more than 1%% of requests lead to errors?</h2>
+    <ul>%s</ul>
+    </div> 
 
   </body>
 </html>
 '''
 
 # HTML template for an individual comment
-POST = '''\
-    <div class=post><em class=title>%s</em> - %s views</div>
+MOST_POPULAR_ARTICLES = '''\
+    <li>"%s" - %s views</li>
+'''
+
+MOST_POPULAR_ARTICLE_AUTHORS = '''\
+    <li>%s - %s views</li>
+'''
+
+ERRORENOUS_REQUESTS = '''\
+    <li>%s - %s%%</li>
 '''
 
 @app.route('/', methods=['GET'])
 def main():
   '''Main page of the forum.'''
-  articles = "".join(POST % (title, views) for title, views in get_most_popular_articles())
-  html = HTML_WRAP# % articles
+  articles = "".join(MOST_POPULAR_ARTICLES % (title, views) for title, views in get_most_popular_articles())
+  authors = "".join(MOST_POPULAR_ARTICLE_AUTHORS % (author_name, views) for author_name, views in get_most_popular_article_authors())
+  errorenous_requests = "".join(ERRORENOUS_REQUESTS % (day.strftime("%b %d, %Y"), request_to_error_ratio) for day, request_to_error_ratio in get_errorenous_requests_per_day_more_than_a_percent())
+
+  html = HTML_WRAP % (articles, authors, errorenous_requests)
   return html
 
 if __name__ == '__main__':
