@@ -20,8 +20,8 @@ More details can be found here:
 - Prepare the [software and data](./project_details.md#prepare-the-software-and-data)
 
 ## Run
-- `clone` or `download` the code in your vagrant folder
-- [SSH into vagrant](./project_details.md#the-virtual-machine)
+- `clone` or `download` the code in your `vagrant` folder
+- [SSH into vagrant](./project_details.md#the-virtual-machine) using `vagrant ssh`
 
 ### Step 1: Create the views
 - Enter the database using `psql news`
