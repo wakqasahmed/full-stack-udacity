@@ -16,11 +16,11 @@ More details can be found here:
 - Web Browser (Recommended: Chrome)
 - Internet Connection (its not offline compatible)
 - A bit of Curosity ;)
-- Prepare the [software and data](./project_details.md)
+- Prepare the [software and data](./project_details.md#prepare-the-software-and-data)
 
 ## Run
 - `clone` or `download` the code in your vagrant folder
-- [SSH into vagrant](./project_details.md)
+- [SSH into vagrant](./project_details.md#the-virtual-machine)
 
 ### Step 1: Create the views
 - Enter the database using `psql news`
