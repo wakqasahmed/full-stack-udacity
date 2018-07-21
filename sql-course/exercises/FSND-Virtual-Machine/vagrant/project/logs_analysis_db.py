@@ -6,6 +6,7 @@ import bleach
 
 DBNAME = "news"
 
+'''Dummy data to test the HTML display'''
 MOST_POPULAR_ARTICLES = [("Princess Shellfish Marries Prince Handsome", "1201")]
 MOST_POPULAR_ARTICLE_AUTHORS = [("Ursula La Multa", "2304")]
 ERRORENEOUS_REQUESTS = [("July 29, 2016", "2.5")]
