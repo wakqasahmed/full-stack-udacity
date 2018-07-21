@@ -12,7 +12,8 @@ More details can be found here:
 # How to run?
 
 ## Pre-requisites
-- Python 3.6.5
+- Python 2.7.12
+- PSQL 9.5.13
 - Web Browser (Recommended: Chrome)
 - Internet Connection (its not offline compatible)
 - A bit of Curosity ;)
@@ -73,16 +74,20 @@ CREATE OR REPLACE VIEW errorenous_requests_per_day_more_than_a_percent AS (
 );
 
 ```
+- Now you can run the following queries to get the logs analysis:
+  1. What are the most popular three articles of all time? `SELECT * FROM most_popular_articles;`
+  2. Who are the most popular article authors of all time? `SELECT * FROM most_popular_article_authors;`
+  3. On which days did more than 1% of requests lead to errors? `SELECT * FROM errorenous_requests_per_day_more_than_a_percent;`
 
-### Step 2: Run the analysis
+### Step 2: Run the analysis (**BONUS**)
 - Run `logs_analysis.py` using the following command: `python logs_analysis.py`
 - Browse to `http://0.0.0.0:8000`
 - Done - You should see web browser displaying the logs analysis and HTTP request logging in terminal
 
 # Technology Stack
 This website uses the following technologies:
-- **Python 3.6.5**
-- **PSQL **
+- **Python 2.7.12**
+- **PSQL 9.5.13**
 
 # Issues
 - Feel free to report if you find any
