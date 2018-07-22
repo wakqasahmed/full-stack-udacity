@@ -6,7 +6,7 @@ from flask import Flask, request, redirect, url_for
 
 from logs_analysis_db import (most_popular_articles,
                               most_popular_article_authors,
-                              erroneous_requests_per_day_gt_a_percent)
+                              erroneous_req_per_day_gt_a_percent)
 
 app = Flask(__name__)
 
@@ -79,7 +79,7 @@ def main():
             ERRONEOUS_REQUESTS
             % (day.strftime("%b %d, %Y"), request_to_error_ratio)
             for day, request_to_error_ratio
-            in erroneous_requests_per_day_gt_a_percent)
+            in erroneous_req_per_day_gt_a_percent)
 
     html = HTML_WRAP % (articles, authors, erroneous_requests)
     return html
