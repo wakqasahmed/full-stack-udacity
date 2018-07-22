@@ -6,7 +6,7 @@ from flask import Flask, request, redirect, url_for
 
 from logs_analysis_db import (get_most_popular_articles,
                               get_most_popular_article_authors,
-                              get_errorenous_requests_per_day_gt_a_percent)
+                              get_erroneous_requests_per_day_gt_a_percent)
 
 app = Flask(__name__)
 
@@ -60,8 +60,8 @@ MOST_POPULAR_ARTICLE_AUTHORS = '''\
     <li>%s - %s views</li>
 '''
 
-# HTML template for errorenous request > 1 percent
-ERRORENOUS_REQUESTS = '''\
+# HTML template for erroneous request > 1 percent
+erroneous_REQUESTS = '''\
     <li>%s - %s%%</li>
 '''
 
@@ -75,13 +75,13 @@ def main():
     authors = "".join(MOST_POPULAR_ARTICLE_AUTHORS
                       % (author_name, views) for author_name, views
                       in get_most_popular_article_authors())
-    errorenous_requests = "".join(
-            ERRORENOUS_REQUESTS
+    erroneous_requests = "".join(
+            erroneous_REQUESTS
             % (day.strftime("%b %d, %Y"), request_to_error_ratio)
             for day, request_to_error_ratio
-            in get_errorenous_requests_per_day_gt_a_percent())
+            in get_erroneous_requests_per_day_gt_a_percent())
 
-    html = HTML_WRAP % (articles, authors, errorenous_requests)
+    html = HTML_WRAP % (articles, authors, erroneous_requests)
     return html
 
 if __name__ == '__main__':

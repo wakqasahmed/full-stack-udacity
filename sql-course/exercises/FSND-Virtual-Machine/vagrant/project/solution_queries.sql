@@ -52,7 +52,7 @@ from log
 group by day
 order by day desc;
 
-#### errorenous requests day wise
+#### erroneous requests day wise
 select time::date as day, count(status) as no_of_errors
 from log
 where status != '200 OK'
@@ -61,7 +61,7 @@ order by day desc;
 
 ### Final
 #### combining the above two queries and creating a view
-CREATE OR REPLACE VIEW errorenous_requests_per_day_more_than_a_percent AS (
+CREATE OR REPLACE VIEW erroneous_requests_per_day_more_than_a_percent AS (
 	SELECT critical_error_log.day, ROUND(critical_error_log.request_to_error_ratio,1) as request_to_error_ratio
 	FROM
 	(

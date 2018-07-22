@@ -29,12 +29,12 @@ def get_most_popular_article_authors():
     return authors
 
 
-def get_errorenous_requests_per_day_gt_a_percent():
+def get_erroneous_requests_per_day_gt_a_percent():
     """Return day and error rate in percent for the days when
     more than 1% of requests lead to errors."""
     db = psycopg2.connect("dbname=news")
     c = db.cursor()
-    c.execute("select * from errorenous_requests_per_day_more_than_a_percent")
+    c.execute("select * from erroneous_requests_per_day_more_than_a_percent")
     erroreneous_requests = c.fetchall()
     db.close()
     return erroreneous_requests
