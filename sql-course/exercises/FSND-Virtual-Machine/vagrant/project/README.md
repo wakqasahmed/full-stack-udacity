@@ -9,6 +9,8 @@ More details can be found here:
 
 **[Project Submission](./project_submission.md)**
 
+**[Logs Analysis Result in Plain Text](./logs_analysis_result.txt)**
+
 # How to run?
 
 ## Pre-requisites
