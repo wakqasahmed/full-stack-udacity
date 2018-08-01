@@ -1,11 +1,11 @@
 body {
 	font-family: 'Lato', sans-serif;
-    color: #2d3c49;
+    color: #747704;
     font-weight: 300;
 }
 
 .text-muted {
-	color: #7d97ad;
+	color: #bcbbbb;
 }
 
 .text-thin {
@@ -25,14 +25,10 @@ hr {
 	border: none;
     height: 2px;
     /* Set the hr color */
-    color: #7d97ad; /* old IE */
-    background-color: #7d97ad; /* Modern Browsers */
+    color: gray; /* old IE */
+    background-color: gray; /* Modern Browsers */
 }
 
 .project-link {
 	text-decoration: none !important;
-}
-
-.project-thumbnail {
-	width: 100%;
 }
