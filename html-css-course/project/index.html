@@ -1,120 +1,143 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Portfolio Project - Intro to HTML and CSS</title>
+	<title>Build a Portfolio Site</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<!-- Google Font -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 <body>
 
 <div class="container">
-	<div class="row">
-		<div class="col-md-6">
-			<img class="img-responsive title-logo" src="images/logo.png" alt="Udacity" />
-		</div>
-		<div class="col-md-6 text-right text-uppercase">
-			<h1 class="text-thin title-super">jane doette</h1>
-			<h4>front-end ninja</h4>
-		</div>
-	</div>
-
-
-	<div class="row">
-		<div class="col-md-12">
-			<hr />
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-12">
-			<img class="img-responsive" src="images/call_to_action.jpg" alt="HTML Ninja Show-off" width="1140" />
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-12">
-			<h2 class="text-muted">Featured Work</h2>
-		</div>
-	</div>
-
-	<div class="row">
-		<div class="col-md-4 text-center">
-				<img class="img-responsive center-block project-thumbnail" src="images/appify.jpg" alt="Udacity Appify" data-toggle="modal" data-target="#project_appify" />
-				<h3 class="text-uppercase">appify</h3>
-				<p class="text-thin"><a class="project-link text-muted" href="https://github.com/udacity/Appify/">https://github.com/udacity/Appify/</a></p>
-		</div>	
-		<div class="col-md-4 text-center">
-				<img class="img-responsive center-block project-thumbnail" src="images/sunflower.jpg" alt="Udacity Sunflower" data-toggle="modal" data-target="#project_sunflower" />		
-				<h3 class="text-uppercase">sunflower</h3>
-				<p class="text-thin"><a class="project-link text-muted" href="https://github.com/udacity/Sunflower/">https://github.com/udacity/Sunflower/</a></p>
-		</div>	
-		<div class="col-md-4 text-center">
-			<div>
-				<img class="img-responsive center-block project-thumbnail" src="images/bokeh.jpg" alt="Udacity Bokeh" data-toggle="modal" data-target="#project_bokeh" />
-				<h3 class="text-uppercase">bokeh</h3>
-				<p class="text-thin"><a class="project-link text-muted" href="https://github.com/udacity/Bokeh/">https://github.com/udacity/Bokeh/</a></p>
+	<header>
+		<div class="row">
+			<div class="col-4 col-md-4 col-sm-12">
+				<img class="img-fluid title-logo" src="images/logo.png" alt="Udacity" />
 			</div>
-						
-		</div>		
+			<div class="col-8 col-sm-12 col-md-8 text-right text-uppercase">
+				<h1 class="text-thin title-super">waqas ahmed</h1>
+				<h4>full stack ninja</h4>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<hr />
+			</div>
+		</div>
+	</header>
+
+	<main>
+		<div class="row">
+			<div class="col">
+				<img class="img-fluid hero" src="images/call_to_action.jpg" alt="HTML Ninja Show-off" />
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="text-muted">Featured Work</h2>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col align-items-start text-center">
+
+					<img class="img-fluid project-thumbnail" src="images/appify.jpg" alt="Udacity Appify" data-toggle="modal" data-target="#project_appify" />
+					<h3 class="text-uppercase">appify</h3>
+					<p class="text-thin"><a class="project-link text-muted" href="https://github.com/udacity/Appify/">https://github.com/udacity/Appify/</a></p>
+			</div>	
+			<div class="col align-items-center text-center">
+					<img class="img-fluid project-thumbnail" src="images/sunflower.jpg" alt="Udacity Sunflower" data-toggle="modal" data-target="#project_sunflower" />		
+					<h3 class="text-uppercase">sunflower</h3>
+					<p class="text-thin"><a class="project-link text-muted" href="https://github.com/udacity/Sunflower/">https://github.com/udacity/Sunflower/</a></p>
+			</div>	
+			<div class="col align-items-end text-center">
+				<div>
+					<img class="img-fluid project-thumbnail" src="images/bokeh.jpg" alt="Udacity Bokeh" data-toggle="modal" data-target="#project_bokeh" />
+					<h3 class="text-uppercase">bokeh</h3>
+					<p class="text-thin"><a class="project-link text-muted" href="https://github.com/udacity/Bokeh/">https://github.com/udacity/Bokeh/</a></p>
+				</div>
+							
+			</div>		
+		</div>
 	</div>
-</div>
 
-<!-- Project Appify Modal -->
-<div class="modal fade" id="project_appify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">Project Appify</h4>
-      </div>
-      <div class="modal-body">
-        <img class="img-responsive" src="http://placehold.it/555x250">
-        This was my first project in this class. I learned a lot about HTML and CSS.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+	<!-- Project Appify Modal -->
+	<div class="modal fade" id="project_appify" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="myModalLabel">Project Appify</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-fluid" src="http://placehold.it/555x250">
+	        This was my first project in this class. I learned a lot about HTML and CSS.
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
-<!-- Project Sunflower Modal -->
-<div class="modal fade" id="project_sunflower" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">Project Sunflower</h4>
-      </div>
-      <div class="modal-body">
-        <img class="img-responsive" src="http://placehold.it/555x250">
-        This was my second project in this class. I learned a lot about HTML and CSS.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+	<!-- Project Sunflower Modal -->
+	<div class="modal fade" id="project_sunflower" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="myModalLabel">Project Sunflower</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-fluid" src="http://placehold.it/555x250">
+	        This was my second project in this class. I learned a lot about HTML and CSS.
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
 
-<!-- Project Bokeh Modal -->
-<div class="modal fade" id="project_bokeh" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">Project Bokeh</h4>
-      </div>
-      <div class="modal-body">
-        <img class="img-responsive" src="http://placehold.it/555x250">
-        This was my third project in this class. I learned a lot about HTML and CSS.
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+	<!-- Project Bokeh Modal -->
+	<div class="modal fade" id="project_bokeh" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h4 class="modal-title" id="myModalLabel">Project Bokeh</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="img-fluid" src="http://placehold.it/555x250">
+	        This was my third project in this class. I learned a lot about HTML and CSS.
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	</main>
+
+	<footer>
+		<div class="row">
+			<div class="col text-center">
+				<p>Feel free to <a href="mailto:wakqasahmed@gmail.com">contact me</a></p>
+			</div>
+		</div>
+	</footer>
+
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
 </body>
 </html>

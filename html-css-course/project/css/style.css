@@ -16,10 +16,6 @@ body {
 	margin-top: 20px;
 }
 
-.title-super {
-	font-size: 60px;
-}
-
 hr {
 	width: 100%;
 	border: none;
@@ -29,10 +25,29 @@ hr {
     background-color: #7d97ad; /* Modern Browsers */
 }
 
+.hero {
+	max-width: 100%;
+	width: 100%;
+}
+
 .project-link {
 	text-decoration: none !important;
 }
 
-.project-thumbnail {
-	width: 100%;
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	.title-super {
+		font-size: 60px;
+	}
+
+	.project-thumbnail {
+		width: 100%;
+	}
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+	.title-super {
+		font-size: 48px;
+	}
 }
