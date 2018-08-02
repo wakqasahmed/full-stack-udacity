@@ -12,10 +12,6 @@ body {
 	font-weight: 100;
 }
 
-.title-logo {
-	margin-top: 20px;
-}
-
 hr {
 	width: 100%;
 	border: none;
@@ -36,7 +32,7 @@ hr {
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
-	.title-super {
+	.portfolio-name {
 		font-size: 60px;
 	}
 
@@ -47,7 +43,22 @@ hr {
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
-	.title-super {
+	.portfolio-name {
 		font-size: 48px;
 	}
 }
+
+/* Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) { 
+	.header-center {
+	    display: block;
+	    margin-left: auto;
+	    margin-right: auto;
+	    text-align: center;
+	}
+
+	.portfolio-role-center { 
+		text-align: center!important;
+	}
+}
+
